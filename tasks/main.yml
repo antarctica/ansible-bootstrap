@@ -1,0 +1,7 @@
+---
+# Enable passwordless sudo and create controller user
+
+- name: enable passwordless sudo for sudoers
+  template: src=etc/sudoers.j2 dest=/etc/sudoers validate='visudo -cf %s'
+
+- include: controller-user.yml
