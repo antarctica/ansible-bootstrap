@@ -56,6 +56,13 @@ These roles are used for internal projects which may dictate whether any contrib
 
 ## Variables
 
+* `bootstrap_controller_user_username`
+	* The username of the controller user, used for management tasks, if enabled
+	* This variable **must** be a valid unix username
+	* Default: "controller"
+* `bootstrap_controller_user_enabled`
+	* If "true" a user for management tasks, termed a controller user, will be created.
+	* Default: true
 * `bootstrap_controller_user_authorized_keys_directory`
 	* Path relative to where this role is installed to the directory that contains files for the `authorized_keys` file of the controller user.
 	* This variable **must** point to a directory, it **must not** include a trailing `/`.
