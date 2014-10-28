@@ -7,7 +7,7 @@ Performs minimal configuration required to enable management of a node by automa
 ## Overview
 
 * Configures passwordless sudo for ease of use from the terminal and when using automated tools (such as ansible).
-* Creates a new OS user, 'controller' for performing privileged actions (such as `apt-get install`) using sudo. Designed for use from the terminal and when using automated tools (such as ansible). The `authorized_keys` file for the user is set to contain any file in the `bootstrap_controller_user_authorized_keys_directory` directory.
+* Unless disabled, creates a new OS user, 'controller' for performing privileged actions (such as `apt-get install`) using sudo. Designed for use from the terminal and when using automated tools (such as ansible). The `authorized_keys` file for the user is set to contain any file in the `bootstrap_controller_user_authorized_keys_directory` directory.
 
 ## Author
 
@@ -37,6 +37,10 @@ This role is designed for internal use but if useful can be shared publicly.
 	* Default: "../../../public_keys"
 
 ## Changelog
+
+### 0.1.2 - October 2014
+
+* Creation of controller user is now optional though enabled by default
 
 ### 0.1.1 - September 2014
 
