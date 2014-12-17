@@ -1,5 +1,9 @@
 # Bootstrap (`bootstrap`) - Changelog
 
+## 0.1.4 - December 2014
+
+* Adding compatibility with Ansible Galaxy
+
 ## 0.1.3 - December 2014
 
 * Preparing role for public release
