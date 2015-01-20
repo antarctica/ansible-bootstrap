@@ -1,13 +1,13 @@
-# Bootstrap (`bootstrap`)
+# Bootstrap Vagrant (`bootstrap-vagrant`)
 
 **Part of the BAS Ansible Role Collection (BARC)**
 
-Performs minimal configuration required to enable management of a node by automated tools
+Performs minimal configuration required to enable management of a Vagrant VM by automated tools
 
 ## Overview
 
 * Configures passwordless sudo for ease of use from the terminal and when using automated tools (such as ansible).
-* Unless disabled, creates a new OS user, 'controller' for performing privileged actions (such as `apt-get install`) using sudo. Designed for use from the terminal and when using automated tools (such as ansible). The `authorized_keys` file for the user is set to contain any file in the `bootstrap_controller_user_authorized_keys_directory` directory.
+* Unless disabled, creates a new OS user, 'controller' for performing privileged actions (such as `apt-get install`) using sudo. Designed for use from the terminal and when using automated tools (such as ansible). The `authorized_keys` file for the user is set to contain any file in the `bootstrap_vagrant_controller_user_authorized_keys_directory` directory.
 
 ## Availability
 
@@ -19,18 +19,18 @@ This role is designed for internal use but if useful can be shared publicly.
 
 #### Other requirements
 
-* Public keys which should be added to the `authorized_keys` file of the controller user, each key should be a separate file. Keys should be contained in  `bootstrap_controller_user_authorized_keys_directory`.
+* Public keys which should be added to the `authorized_keys` file of the controller user, each key should be a separate file. Keys should be contained in  `bootstrap_vagrant_controller_user_authorized_keys_directory`.
 
 ### Variables
 
-* `bootstrap_controller_user_username`
+* `bootstrap_vagrant_controller_user_username`
 	* The username of the controller user, used for management tasks, if enabled
 	* This variable **must** be a valid unix username
 	* Default: "controller"
-* `bootstrap_controller_user_enabled`
+* `bootstrap_vagrant_controller_user_enabled`
 	* If "true" a user for management tasks, termed a controller user, will be created.
 	* Default: true
-* `bootstrap_controller_user_authorized_keys_directory`
+* `bootstrap_vagrant_controller_user_authorized_keys_directory`
 	* Path relative to where this role is installed to the directory that contains files for the `authorized_keys` file of the controller user.
 	* This variable **must** point to a directory, it **must not** include a trailing `/`.
 	* Default: "../../../public_keys"
@@ -43,7 +43,7 @@ This project welcomes contributions, see `CONTRIBUTING` for our general policy.
 
 ### Committing changes
 
-The [Git flow](https://github.com/fzaninotto/Faker#formatters) workflow is used to manage development of this package.
+The [Git flow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) workflow is used to manage development of this package.
 
 Discrete changes should be made within *feature* branches, created from and merged back into *develop* (where small one-line changes may be made directly).
 

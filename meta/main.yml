@@ -1,6 +1,6 @@
 ---
 galaxy_info:
-  description: Performs minimal configuration required to enable management of a node by automated tools
+  description: Performs minimal configuration required to enable management of a Vagrant VM by automated tools
   author: British Antarctic Survey - Web and Applications Team
   company: British Antarctic Survey
   license: MIT
@@ -13,7 +13,7 @@ galaxy_info:
 
 armadillo_info:
   name: Bootstrap
-  version: 0.1.4
-  source: git@stash.ceh.ac.uk:7999/barc/boostrap.git
+  version: 1.0.0
+  source: git@stash.ceh.ac.uk:7999/barc/boostrap-vagrant.git
 
 dependencies: []
