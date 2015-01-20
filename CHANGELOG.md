@@ -1,4 +1,8 @@
-# Bootstrap (`bootstrap`) - Changelog
+# Bootstrap Vagrant (`bootstrap-vagrant`) - Changelog
+
+## 1.0.0 - January 2015
+
+* Renaming role for consistency with other provisioning providers
 
 ## 0.1.4 - December 2014
 
