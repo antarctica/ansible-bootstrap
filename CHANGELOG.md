@@ -1,5 +1,9 @@
 # Bootstrap Vagrant (`bootstrap-vagrant`) - Changelog
 
+## 1.0.1 - March 2015
+
+* Fixing tasks to prevent unnecessary change reporting
+
 ## 1.0.0 - January 2015
 
 * Renaming role for consistency with other provisioning providers
