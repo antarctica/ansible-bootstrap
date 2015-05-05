@@ -12,8 +12,8 @@ galaxy_info:
   - system
 
 armadillo_info:
-  name: Bootstrap
-  version: 1.0.2
+  name: Bootstrap Vagrant
+  version: 2.0.0
   source: git@stash.ceh.ac.uk:7999/barc/boostrap-vagrant.git
 
 dependencies: []

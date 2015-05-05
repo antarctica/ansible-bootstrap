@@ -1,5 +1,9 @@
 # Bootstrap Vagrant (`bootstrap-vagrant`) - Changelog
 
+## 2.0.0 - May 2015
+
+* Removes support for modifying the sudoers file, ensure you are using a base box above version 2.0.0
+
 ## 1.0.3 - March 2015
 
 * Fixing sudoers file to allow Ansible to sudo as non-root users
