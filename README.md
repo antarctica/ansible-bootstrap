@@ -6,8 +6,8 @@ Performs minimal configuration required to enable management of a Vagrant VM by 
 
 ## Overview
 
-* Configures passwordless sudo for ease of use from the terminal and when using automated tools (such as ansible).
-* Unless disabled, creates a new OS user, 'controller' for performing privileged actions (such as `apt-get install`) using sudo. Designed for use from the terminal and when using automated tools (such as ansible). The `authorized_keys` file for the user is set to contain any file in the `bootstrap_vagrant_controller_user_authorized_keys_directory` directory.
+* Unless disabled, creates a new OS user, 'controller' for performing privileged actions (such as `apt-get install`) using sudo or reading log files. 
+* If enabled, the `authorized_keys` file for the controller user is set to contain any file in the `bootstrap_vagrant_controller_user_authorized_keys_directory` directory.
 
 ## Availability
 
@@ -19,6 +19,8 @@ This role is designed for internal use but if useful can be shared publicly.
 
 #### Other requirements
 
+* As of version **2.0.0** any OS this role is applied to **MUST** ensure passwordless sudo is enabled for the "sudo" group and SSH Agent Forwarding is preserved when using sudo.
+    * If using the [antarctica/trusty](https://atlas.hashicorp.com/antarctica/boxes/trusty) base box with this role, ensure you are using version **2.0.0** or higher, which implements these requirements.
 * Public keys which should be added to the `authorized_keys` file of the controller user, each key should be a separate file. Keys should be contained in  `bootstrap_vagrant_controller_user_authorized_keys_directory`.
 
 ### Variables
